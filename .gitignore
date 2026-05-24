@@ -1,0 +1,22 @@
+# Terraform files to NEVER push
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+.terraform/
+.terraform.lock.hcl
+crash.log
+crash.*.log
+
+# Sensitive files
+*.tfvars
+!terraform.tfvars.example
+.env
+
+# macOS junk
+.DS_Store
+
+# VS Code settings
+.vscode/
+
+# Logs
+*.log
