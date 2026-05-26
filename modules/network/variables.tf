@@ -48,3 +48,9 @@ variable "tags" {
   type        = map(string)
   default     = {}
 }
+variable "appgw_subnet_cidr" {
+    description = "CIDR block for the appgw subnet (App Gateway)"
+    type        = string
+    default     = "10.0.4.0/24"
+  
+}

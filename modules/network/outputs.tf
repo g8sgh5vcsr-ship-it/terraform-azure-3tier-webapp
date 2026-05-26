@@ -42,3 +42,8 @@ output "data_subnet_id" {
   description = "ID of the data subnet"
   value       = azurerm_subnet.data.id
 }
+output "appgw_subnet_id" {
+    description = "ID of the appgw subnet"
+    value       = azurerm_subnet.appgw.id
+  
+}

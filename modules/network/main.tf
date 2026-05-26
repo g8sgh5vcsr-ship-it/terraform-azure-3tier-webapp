@@ -28,6 +28,13 @@ resource "azurerm_subnet" "web" {
   virtual_network_name = azurerm_virtual_network.main.name
   address_prefixes     = [var.web_subnet_cidr]
 }
+resource "azurerm_subnet" "appgw" {
+    name                 = "snet-appgw"
+    resource_group_name  = azurerm_resource_group.main.name
+    virtual_network_name = azurerm_virtual_network.main.name
+    address_prefixes     = [var.web_subnet_cidr]
+  
+}
 
 # Subnet for the app tier (App Service)
 resource "azurerm_subnet" "app" {
